@@ -54,12 +54,13 @@ function myFunction() {
     input = document.getElementById("searchCoffee");
     filter = input.value.toUpperCase();
     var filteredCoffeeNames = [];
-
+    var selectedRoast = roastSelection.value;
     for (i = 0; i < coffees.length; i++) {
         td = coffees[i].name;
-        if (td.toUpperCase().indexOf(filter) > -1) {
+        if (td.toUpperCase().indexOf(filter) > -1 && selectedRoast === "all") {
             filteredCoffeeNames.push(coffees[i]);
-        } else {
+        } else if (td.toUpperCase().indexOf(filter) > -1 && coffees[i].roast === selectedRoast){
+            filteredCoffeeNames.push(coffees[i]);
         }
     }
     tbody.innerHTML = renderCoffees(filteredCoffeeNames);
