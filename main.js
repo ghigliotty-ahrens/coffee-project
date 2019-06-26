@@ -9,15 +9,6 @@ function renderCoffee(coffee) {
 
     return html;
 }
-// function renderCoffee(coffee) {
-//     var html = '<tr class="coffee">';
-//     html += '<td>' + coffee.id + '</td>';
-//     html += '<td>' + coffee.name + '</td>';
-//     html += '<td>' + coffee.roast + '</td>';
-//     html += '</tr>';
-//
-//     return html;
-// }
 
 function renderCoffees(coffees) {
     var html = '';
@@ -32,9 +23,9 @@ function updateCoffees(e) {
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (selectedRoast === "all") {
+        if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
-        } else if (coffee.roast === selectedRoast) {
+        } else if (selectedRoast === "all") {
             filteredCoffees.push(coffee);
         }
     });
@@ -59,44 +50,18 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'}
 ];
 function myFunction() {
-//     var content = coffees[0].name;
-//     console.log(content);
-//     var filter = content.indexOf(document.getElementById("searchCoffee").innerText)!==-1;
-//     if (filter) {
-//         document.getElementById("show").style.display = 'block';
-//     } else {
-//         document.getElementById("show").style.display = 'none';
-//     }
-
-
-    // switch (i) {
-    //     case (document.getElementById("searchCoffee").innerText):
-    // }
     var input, filter, td, i;
     input = document.getElementById("searchCoffee");
     filter = input.value.toUpperCase();
-    console.log(filter);
-    //table = document.getElementById("coffeeDiv");
-    // tr = document.getElementById("coffees").;
-    // console.log(tr);
     var filteredCoffeeNames = [];
 
     for (i = 0; i < coffees.length; i++) {
         td = coffees[i].name;
-        console.log(td);
-        // txtValue = td.innerText;
-        // console.log(txtValue);
         if (td.toUpperCase().indexOf(filter) > -1) {
-            console.log("hello");
+            filteredCoffeeNames.push(coffees[i]);
         } else {
-            console.log("no");
         }
     }
-    coffees.forEach(function (coffee) {
-        if (coffee === coffee.name) {
-            filteredCoffeeNames.push(coffee);
-        }
-    });
     tbody.innerHTML = renderCoffees(filteredCoffeeNames);
 }
 
