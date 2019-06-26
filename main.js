@@ -64,11 +64,22 @@ function myFunction() {
     }
     tbody.innerHTML = renderCoffees(filteredCoffeeNames);
 }
+function createCoffee(e) {
+    e.preventDefault();
+    coffees.push({
+        id: (coffees.length + 1),
+        name: (document.getElementById('create-coffee').value),
+        roast: createRoastSelection.value});
+    tbody.innerHTML = renderCoffees(coffees);
+}
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+var createButton = document.querySelector('#submit-create');
+var createRoastSelection = document.querySelector('#roast-selection-create');
 
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+createButton.addEventListener('click', createCoffee);
