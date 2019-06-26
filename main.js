@@ -32,7 +32,9 @@ function updateCoffees(e) {
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        if (selectedRoast === "all") {
+            filteredCoffees.push(coffee);
+        } else if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
     });
@@ -57,25 +59,47 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'}
 ];
 function myFunction() {
-    var input, filter, tr, td, i, txtValue;
+//     var content = coffees[0].name;
+//     console.log(content);
+//     var filter = content.indexOf(document.getElementById("searchCoffee").innerText)!==-1;
+//     if (filter) {
+//         document.getElementById("show").style.display = 'block';
+//     } else {
+//         document.getElementById("show").style.display = 'none';
+//     }
+
+
+    // switch (i) {
+    //     case (document.getElementById("searchCoffee").innerText):
+    // }
+    var input, filter, td, i;
     input = document.getElementById("searchCoffee");
     filter = input.value.toUpperCase();
+    console.log(filter);
     //table = document.getElementById("coffeeDiv");
-    tr = document.getElementById("coffees");
+    // tr = document.getElementById("coffees").;
+    // console.log(tr);
+    var filteredCoffeeNames = [];
 
     for (i = 0; i < coffees.length; i++) {
-        td = document.getElementById("coffeeName");
+        td = coffees[i].name;
         console.log(td);
-        if (td) {
-            txtValue = td.textContent || td.innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                tr[i].style.display = "";
-            } else {
-                tr[i].style.display = "none";
-            }
+        // txtValue = td.innerText;
+        // console.log(txtValue);
+        if (td.toUpperCase().indexOf(filter) > -1) {
+            console.log("hello");
+        } else {
+            console.log("no");
         }
     }
+    coffees.forEach(function (coffee) {
+        if (coffee === coffee.name) {
+            filteredCoffeeNames.push(coffee);
+        }
+    });
+    tbody.innerHTML = renderCoffees(filteredCoffeeNames);
 }
+
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
