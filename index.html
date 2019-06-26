@@ -11,7 +11,7 @@
     <form>
         <label for="roast-selection">Roast</label>
         <select id="roast-selection">
-            <option>all</option>
+            <option value="all">all</option>
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
@@ -25,17 +25,17 @@
             <p></p>
         </div>
     </div>
-
-<!--    <table>-->
-<!--        <thead>-->
-<!--            <tr>-->
-<!--                <th>ID</th>-->
-<!--                <th>NAME</th>-->
-<!--                <th>ROAST</th>-->
-<!--            </tr>-->
-<!--        </thead>-->
-<!--        <tbody id="coffees"></tbody>-->
-<!--    </table>-->
+    <h1>Add a Coffee</h1>
+    <form>
+        <label for="roast-selection-create">Roast</label>
+        <select id="roast-selection-create">
+            <option value="light">light</option>
+            <option value="medium">medium</option>
+            <option value="dark">dark</option>
+        </select>
+        <input id="create-coffee" type="text" placeholder="Enter New Coffee Name">
+        <input id="submit-create" type="submit"/>
+    </form>
 
     <script src="main.js"></script>
 </body>
