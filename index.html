@@ -9,18 +9,23 @@
     <h1>Coffee 2!</h1>
 
     <form>
-        <label for="roast-selection"></label>
+        <label for="roast-selection">Roast</label>
         <select id="roast-selection">
+            <option>all</option>
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
+        <input id="searchCoffee" type="text" onkeyup="myFunction()" placeholder="Enter Coffee Name">
         <input id="submit" type="submit" />
     </form>
+    <div id="coffeeDiv">
         <div id="coffees">
-            <h1></h1>
+            <h2 id="coffeeName"></h2>
             <p></p>
         </div>
+    </div>
+
 <!--    <table>-->
 <!--        <thead>-->
 <!--            <tr>-->
