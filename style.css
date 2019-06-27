@@ -46,7 +46,7 @@ h1 {
     /*}*/
 }
 div.coffee {
-    background-color: rgba(183, 145, 118, 0.5);
+    /*background-color: rgba(183, 145, 118, 0.5);*/
     border-radius: 5px;
     margin-left: 20px;
     margin-bottom: 20px;
@@ -63,15 +63,15 @@ div.right-side {
 .right-side label {
     font-weight: bold;
 }
-.bg-light {
-    opacity: 0.5;
+.coffee-bg-light {
+    background-color: rgba(252, 229, 207, 0.7);
 }
-.bg-light h2 {
-    opacity: 1;
+.coffee-bg-medium {
+    background-color: rgba(183, 145, 118, 0.7);
 }
-.bg-dark {
-    opacity: 0.5;
+.coffee-bg-dark {
+    background-color: rgba(121, 83, 48, 0.7);
 }
-.bg-dark h2 {
-    opacity: 1;
+.coffee-bg-light h2 {
+    color: rgb(249, 223, 164);
 }

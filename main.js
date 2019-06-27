@@ -1,7 +1,7 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee col-5 bg-' + coffee.roast + '">';
+    var html = '<div class="coffee col-5 coffee-bg-' + coffee.roast + '">';
     // html += '<td>' + coffee.id + '</td>';
     html += '<h2>' + coffee.name + ' &nbsp;' + '<span class="h2pt2">' + coffee.roast + '</span>' + '</h2>';
     // html += '<p>' + coffee.roast + '</p>';
@@ -49,6 +49,8 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'}
 ];
+coffees.reverse();
+
 function myFunction() {
     var input, filter, td, i;
     input = document.getElementById("searchCoffee");
@@ -67,7 +69,7 @@ function myFunction() {
 }
 function createCoffee(e) {
     e.preventDefault();
-    coffees.push({
+    coffees.unshift({
         id: (coffees.length + 1),
         name: (document.getElementById('create-coffee').value),
         roast: createRoastSelection.value});
