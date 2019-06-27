@@ -7,3 +7,16 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
+.bodyColor {
+    background-color: goldenrod;
+}
+
+#topRowHeight {
+    height: 50px;
+}
+
+img {
+    height: 70px;
+    width: auto;
+}
