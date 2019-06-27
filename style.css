@@ -9,7 +9,10 @@ td, th {
 }
 
 .bodyColor {
-    background-color: goldenrod;
+    background-image: url("arabica-aromatic-beverage-678654.jpg");
+    background-size: 105%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 #topRowHeight {
@@ -17,6 +20,58 @@ td, th {
 }
 
 img {
-    height: 70px;
+    height: 120px;
     width: auto;
+    border: rgb(90, 31, 2) solid 4px;
+    margin-top: -40px;
+}
+.h2pt2 {
+    font-size: 18px;
+    color: rgb(100, 41, 12);
+}
+h2 {
+    margin-bottom: 16px;
+    color: rgb(229, 203, 144);
+    font-weight: bold;
+}
+h1 {
+    color: rgb(90, 31, 2);
+    font-size: 50px;
+}
+.banner {
+    background-color: rgba(183, 145, 118, 0.8);
+        padding-top: 50px;
+        padding-bottom: 40px;
+    /*    margin-bottom: -40px;*/
+    /*}*/
+}
+div.coffee {
+    /*background-color: rgba(183, 145, 118, 0.5);*/
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding-top: 12px;
+}
+div.right-side {
+    background-color: rgba(183, 145, 118, 0.8);
+    border-radius: 5px;
+    padding: 15px;
+    position: fixed;
+    width: 50%;
+    right: 50px;
+}
+.right-side label {
+    font-weight: bold;
+}
+.coffee-bg-light {
+    background-color: rgba(252, 229, 207, 0.7);
+}
+.coffee-bg-medium {
+    background-color: rgba(183, 145, 118, 0.7);
+}
+.coffee-bg-dark {
+    background-color: rgba(121, 83, 48, 0.7);
+}
+.coffee-bg-light h2 {
+    color: rgb(249, 223, 164);
 }
